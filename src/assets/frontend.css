@@ -1,0 +1,453 @@
+.frontend-page {
+    display: flex;
+
+    input {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .content-left {
+        width: 25%;
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+            .text-deco {
+                text-decoration: underline;
+            }
+        }
+
+        .content {
+            margin: 0 20px;
+
+            .block-btn {
+                margin-top: 10px;
+
+                .btn {
+                    background-color: dodgerblue;
+                    border: none;
+                    border-radius: 5px;
+                    padding-block: 15px;
+                    font-size: 20px;
+                    width: 100%;
+                    color: white;
+                }
+            }
+
+            .block-action {
+                margin-top: 30px;
+
+                .recent-div {
+                    margin-bottom: 30px;
+
+                    .progress-div {
+                        .progress-container {
+                            margin-top: 20px;
+                            width: 100%;
+                            background: #e0e0e0;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            position: relative;
+
+                            .progress-bar {
+                                height: 12px;
+                                background: #3498db;
+                                width: 0;
+                                transition: width 0.3s ease-in-out;
+                            }
+
+                        }
+
+                        .progress-text {
+                            .custom-span {
+                                color: blue;
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+
+                }
+
+                .search-div {
+                    margin-bottom: 30px;
+
+                    .search-text {
+                        margin-top: 10px;
+                        font-size: 15px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+
+                    }
+
+                    .search-inp {
+                        width: 100%;
+                        position: relative;
+
+                        .inp {
+                            width: 100%;
+                            height: 50px;
+                            border-radius: 5px;
+                            border-color: rgba(0, 0, 0, 0.2);
+
+                            &::placeholder {
+                                font-size: 18px;
+                                padding-left: 20px;
+                            }
+                        }
+
+                        .icon {
+                            position: absolute;
+                            width: 30px;
+                            right: 20px;
+                            top: 10px;
+                        }
+                    }
+                }
+
+                .folder-file-div {
+                    margin-block: 20px;
+
+                    .title {
+                        background-color: white;
+                        margin-bottom: 10px;
+                    }
+
+                    .folder-block {
+                        overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+                        height: 150px;
+
+                        &::-webkit-scrollbar-button {
+                            display: none;
+                        }
+
+                        /* Tùy chỉnh thanh cuộn */
+
+                        &::-webkit-scrollbar {
+                            width: 8px; /* Điều chỉnh độ rộng thanh cuộn */
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background-color: gray; /* Màu của thanh cuộn */
+                            border-radius: 10px; /* Bo tròn thanh cuộn */
+                        }
+
+                        &::-webkit-scrollbar-track {
+                            background: #f0f0f0; /* Màu nền của phần track */
+                        }
+
+                        .folder-item {
+                            font-size: 17px;
+                            font-weight: 800;
+
+                            .arrow-up, .arrow-down {
+                                svg {
+                                    width: 12px;
+                                    height: auto;
+                                }
+
+                            }
+
+
+                            .icon {
+                                margin-inline: 15px;
+
+                                svg {
+                                    width: 20px;
+                                    height: auto;
+                                }
+                            }
+
+                            .text-sp {
+                                font-weight: 700;
+                                transform: translateY(-1px);
+                            }
+
+                            .count-folder {
+                                margin-left: 20px;
+                                padding: 0 6px;
+                                background-color: #a9adb0;
+                                color: black;
+                                border: none;
+                                border-radius: 4px;
+                                font-size: 12px;
+                                font-weight: bold;
+                            }
+
+                            .count-folder-act {
+                                margin-left: 20px;
+                                padding: 0 6px;
+                                background-color: #2773b8;
+                                color: white;
+                                border: none;
+                                border-radius: 4px;
+                                font-size: 12px;
+                                font-weight: bold;
+                            }
+
+                            .folder-parent {
+                                padding-block: 10px;
+
+                                span svg {
+                                    fill: #a9adb0;
+
+                                    path {
+                                        fill: #a9adb0;
+                                    }
+                                }
+
+                                &:hover {
+                                    cursor: pointer;
+                                }
+
+                                &.folder-parent-act {
+                                    span svg {
+                                        fill: black;
+
+                                        path {
+                                            fill: black;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .list-folder-child {
+                                padding-left: 8px;
+
+                                .child-items {
+                                    .folder-child-pa {
+                                        padding-left: 10px;
+                                        border-radius: 5px;
+                                        padding-block: 10px;
+
+                                        &:hover {
+                                            cursor: pointer;
+                                            background-color: #d3dced;
+                                        }
+
+                                        span svg {
+                                            fill: #a9adb0;
+
+                                            path {
+                                                fill: #a9adb0;
+                                            }
+                                        }
+
+                                        &.folder-child-act {
+                                            background-color: #d3dced;
+                                            color: blue;
+
+                                            span svg {
+                                                fill: blue;
+
+                                                path {
+                                                    fill: blue;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .folder-child-ch-list {
+                                        margin-left: 37px;
+
+                                        .items {
+                                            display: flex;
+                                            margin-block: 10px;
+
+                                            .file-icon {
+                                                width: 20px;
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                            }
+
+
+                        }
+
+                    }
+                }
+
+                .select-box-div {
+                    margin-top: 30px;
+
+                    .checkbox-item {
+                        margin-top: 20px;
+
+                        .item {
+                            label {
+                                margin-left: 5px;
+                                font-weight: bold;
+                                font-size: 16px;
+                                transform: translateY(-1px);
+
+                                &:hover {
+                                    cursor: pointer;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+    .content-right {
+        width: 75%;
+
+        .block-content {
+            margin-top: 10px;
+            overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+            height: 700px;
+
+            &::-webkit-scrollbar-button {
+                display: none;
+            }
+
+            /* Tùy chỉnh thanh cuộn */
+
+            &::-webkit-scrollbar {
+                width: 8px; /* Điều chỉnh độ rộng thanh cuộn */
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: gray; /* Màu của thanh cuộn */
+                border-radius: 10px; /* Bo tròn thanh cuộn */
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f0f0f0; /* Màu nền của phần track */
+            }
+
+            table {
+                border-collapse: collapse; /* make the table borders collapse to each other */
+                width: 100%;
+
+                td {
+                    padding: 10px 8px;
+                    font-size: 19px;
+                    font-weight: 600;
+
+                    &:first-child {
+                        text-align: center;
+                    }
+                }
+
+                th {
+                    font-size: 15px;
+                    color: gray;
+                    font-weight: lighter;
+                    padding: 20px 8px; /* 12px trên/dưới, 8px trái/phải */
+                    background-color: white;
+
+                    &:first-child {
+                        text-align: center;
+                    }
+                }
+
+                thead {
+                    background-color: white;
+
+                    th {
+                        position: sticky; /* make the table heads sticky */
+                        top: 0;
+                        z-index: 10;
+                        span{
+                            cursor: pointer;
+                        }
+                        .filter-icon {
+                            svg {
+                                width: 5px;
+                                height: 5px;
+                            }
+                        }
+                    }
+                }
+
+                tbody {
+
+                    tr {
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #ebeff2;
+                        }
+                    }
+                }
+
+                .image-block {
+                    position: relative;
+                    height: 110px;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 128, 255, 0.7);;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        display: block;
+                        transition: 0.3s ease;
+                    }
+
+                    /* Button */
+
+                    .view-btn {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: rgba(255, 255, 255, 0.3);
+                        color: white;
+                        border: none;
+                        padding: 8px 12px;
+                        font-size: 17px;
+                        border-radius: 20px;
+                        padding-inline: 30px;
+                        cursor: pointer;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+
+                    &:hover {
+                        .overlay {
+                            opacity: 1;
+                        }
+
+                        .view-btn {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+
+            }
+        ;
+        }
+
+    }
+}

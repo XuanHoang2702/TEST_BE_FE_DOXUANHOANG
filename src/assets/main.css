@@ -1,0 +1,7 @@
+@import './base.css';
+@import "frontend.css";
+#app {
+  margin: 0 auto;
+  padding: 0.5rem;
+  font-weight: normal;
+}
