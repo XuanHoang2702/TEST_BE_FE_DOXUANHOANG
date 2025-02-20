@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import FrontView from '../views/TestFront.vue'
+import FrontView from '../views/page/TestFront.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

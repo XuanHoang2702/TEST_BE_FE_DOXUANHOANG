@@ -313,55 +313,55 @@ onMounted(() => {
           </div>
           <hr>
 
-          <div class="folder-file-div">
-            <div class="title">
-              <span class="">Folders</span>
-              <span class="text-deco">New Folders</span>
-            </div>
-            <div class="folder-block">
-              <div v-for="(folder, index) in arrayFolder" :key="index" class="folder-item">
-                <div class="folder-parent"
-                     :class="{'folder-parent-act': folder.isOpen }"
-                     @click="toggleFolder(folder)">
-                  <span v-if="folder.isOpen" v-html="arrowUp" class="arrow-up"></span>
-                  <span v-else v-html="arrowDown" class="arrow-down"></span>
-                  <span class="icon" v-html="folderIcon"></span>
-                  <span class="text-sp">{{ folder.name }}</span>
-                  <button class="count-folder">
-                    {{ getTotalFiles(folder) }}
-                  </button>
-                </div>
+<!--          <div class="folder-file-div">-->
+<!--            <div class="title">-->
+<!--              <span class="">Folders</span>-->
+<!--              <span class="text-deco">New Folders</span>-->
+<!--            </div>-->
+<!--            <div class="folder-block">-->
+<!--              <div v-for="(folder, index) in arrayFolder" :key="index" class="folder-item">-->
+<!--                <div class="folder-parent"-->
+<!--                     :class="{'folder-parent-act': folder.isOpen }"-->
+<!--                     @click="toggleFolder(folder)">-->
+<!--                  <span v-if="folder.isOpen" v-html="arrowUp" class="arrow-up"></span>-->
+<!--                  <span v-else v-html="arrowDown" class="arrow-down"></span>-->
+<!--                  <span class="icon" v-html="folderIcon"></span>-->
+<!--                  <span class="text-sp">{{ folder.name }}</span>-->
+<!--                  <button class="count-folder">-->
+<!--                    {{ getTotalFiles(folder) }}-->
+<!--                  </button>-->
+<!--                </div>-->
 
-                <div v-if="folder.isOpen" class="list-folder-child">
-                  <div v-for="(child, childIndex) in folder.item_child" :key="childIndex"
-                       class="child-items">
-                    <div class="folder-child-pa"
-                         :class="{'folder-child-act': folder.activeChild === childIndex}"
-                         @click="toggleChild(folder, childIndex)">
-                      <span v-if="child.isOpen" v-html="arrowUp" class="arrow-up"></span>
-                      <span v-else v-html="arrowDown" class="arrow-down"></span>
-                      <span class="icon" v-html="folderIcon"></span>
-                      <span class="text-sp">{{ child.name }}</span>
-                      <button class="count-folder"
-                              :class="{'count-folder-act': folder.activeChild === childIndex}">
-                        {{ child.items.length }}
-                      </button>
-                    </div>
+<!--                <div v-if="folder.isOpen" class="list-folder-child">-->
+<!--                  <div v-for="(child, childIndex) in folder.item_child" :key="childIndex"-->
+<!--                       class="child-items">-->
+<!--                    <div class="folder-child-pa"-->
+<!--                         :class="{'folder-child-act': folder.activeChild === childIndex}"-->
+<!--                         @click="toggleChild(folder, childIndex)">-->
+<!--                      <span v-if="child.isOpen" v-html="arrowUp" class="arrow-up"></span>-->
+<!--                      <span v-else v-html="arrowDown" class="arrow-down"></span>-->
+<!--                      <span class="icon" v-html="folderIcon"></span>-->
+<!--                      <span class="text-sp">{{ child.name }}</span>-->
+<!--                      <button class="count-folder"-->
+<!--                              :class="{'count-folder-act': folder.activeChild === childIndex}">-->
+<!--                        {{ child.items.length }}-->
+<!--                      </button>-->
+<!--                    </div>-->
 
-                    <div v-if="child.isOpen" class="folder-child-ch-list">
-                      <div v-for="(item, itemIndex) in child.items" :key="itemIndex" class="items">
-                        <img class="file-icon" src="../../public/img/file-file-type.svg" alt>
-                        {{ item.name.length > 15 ? item.name.slice(0, 20) + '...' : item.name }}
-                        ({{ item.size }} KB)
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--                    <div v-if="child.isOpen" class="folder-child-ch-list">-->
+<!--                      <div v-for="(item, itemIndex) in child.items" :key="itemIndex" class="items">-->
+<!--                        <img class="file-icon" src="../../public/img/file-file-type.svg" alt>-->
+<!--                        {{ item.name.length > 15 ? item.name.slice(0, 20) + '...' : item.name }}-->
+<!--                        ({{ item.size }} KB)-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
 
-          </div>
+<!--          </div>-->
           <hr>
 
           <div class="select-box-div">

@@ -33,6 +33,7 @@ const people = [
   { x: 6, y: 7 },
   { x: 15, y: 20 },
   { x: -12, y: -15 },
+  { x: -37, y: -15 },
 ];
 
 console.log(getPeopleByBoundary(people));
